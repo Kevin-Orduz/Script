@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="listatareas.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1> lista de tareas</h1>
+        <label for="tarea"> Tarea </label>
+        <input type="text" id="tarea">
+        <label for="fecha"> Fecha </label>
+        <input type="date" id="fecha">
+
+        <button onclick="guardar_tarea()"> Guardar </button>
+
+    </div>
+    <div class="tareas">
+        <ol id="listaTareas"></ol>
+    </div>
+    
+    <script src="listatareas.js"></script>
+
+</body>
+</html>
