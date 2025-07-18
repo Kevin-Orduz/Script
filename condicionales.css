@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex; /* Use flexbox for the body */
+    justify-content: center; /* Center the content horizontally */
+    align-items: flex-start; /* Align items to the start of the cross-axis */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #61aeee;
+    color: #333;
+    padding: 20px; /* Add some padding around the columns */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    flex-wrap: wrap; /* Allow columns to wrap to the next line on smaller screens */
+    gap: 20px; /* Space between the columns */
+}
+
+.contenedor {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Allow each column to grow and shrink */
+    min-width: 280px; /* Minimum width for each column before wrapping */
+    max-width: 350px; /* Maximum width for each column */
+}
+
+/* --- Input and Label Styling --- */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"],
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Make input fill its container */
+    max-width: 250px; /* Limit input width */
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* --- Button Styling --- */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: auto; /* Allow button to size according to its content */
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Response Div Styling --- */
+#respuesta,
+#respuesta2,
+#respuesta3 {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    box-sizing: border-box;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 900px) {
+    body {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center; /* Center items when stacked */
+    }
+
+    .contenedor {
+        width: 90%; /* Make containers take more width when stacked */
+        max-width: 400px; /* Max width for stacked containers */
+    }
+}

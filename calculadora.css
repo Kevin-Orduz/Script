@@ -1,0 +1,104 @@
+/* General Body Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Gradient background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Main Calculator Container */
+.contenedor {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    padding: 30px;
+    width: 350px; /* Increased width */
+    max-width: 90%; /* Responsive max-width */
+    box-sizing: border-box; /* Include padding in width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Display Screen */
+#pantalla {
+    width: 100%;
+    height: 70px; /* Larger height for display */
+    background-color: #222; /* Darker screen */
+    color: #00ff00; /* Classic calculator green text */
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 2.5em; /* Larger font size */
+    text-align: right;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-weight: bold;
+    letter-spacing: 1px;
+    /*-webkit-appearance: none; /* Remove default styling for iOS Safari */
+}
+
+/* Keypad Layout */
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns, equal width */
+    gap: 15px; /* Space between buttons */
+    width: 100%;
+}
+
+/* Button Styling */
+.teclado button {
+    width: 100%; /* Ensure buttons fill their grid cell */
+    height: 70px; /* Larger button height */
+    font-size: 1.8em; /* Larger button text */
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #e0e0e0; /* Light gray for numbers */
+    color: #333;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    outline: none; /* Remove outline on focus */
+}
+
+/* Operation Buttons ( +, -, *, / ) */
+.teclado button:nth-child(4n), /* Every 4th button in a row */
+.teclado button:nth-child(16) { /* The division button specifically */
+    background-color: #ff9500; /* Orange for operations */
+    color: white;
+    font-weight: bold;
+}
+
+/* Equals Button */
+.teclado button:nth-child(15) { /* The '=' button */
+    grid-column: span 2; /* Make '=' span two columns */
+    background-color: #4CAF50; /* Green for equals */
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Clear Button */
+.teclado button:last-child { /* The 'C' button */
+    background-color: #f44336; /* Red for clear */
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover Effects */
+.teclado button:hover {
+    filter: brightness(1.1); /* Slightly brighter on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.teclado button:active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.9); /* Slightly darker on click */
+}
