@@ -1,0 +1,52 @@
+#caja {
+    width: 60%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border: 2px solid #cce0ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.highlight h1 {
+    color: #1a73e8;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.highlight p {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#miBoton {
+    background-color: #1a73e8;
+    color: white;
+}
+
+#miBoton:hover {
+    background-color: #155ab6;
+}
+
+#boton2 {
+    background-color: #e53935;
+    color: white;
+}
+
+#boton2:hover {
+    background-color: #c62828;
+}
