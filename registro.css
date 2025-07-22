@@ -1,0 +1,114 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex; /* Usa flexbox para centrar el contenido */
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+    margin: 0;
+    padding: 20px; /* Añade un poco de padding alrededor */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho/alto total */
+}
+
+/* Estilos para el enlace "Atrás" */
+a {
+    position: absolute; /* Permite posicionar el enlace de forma precisa */
+    top: 20px; /* 20px desde la parte superior */
+    left: 20px; /* 20px desde la izquierda */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    color: #007bff; /* Color azul para el enlace */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+a:hover {
+    color: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilos para el contenedor principal del formulario */
+.contenedor {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo del formulario */
+    text-align: center;
+    margin-top: 50px; /* Añade un margen superior para que no choque con el enlace */
+}
+
+/* Estilos para el título del formulario */
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+/* Estilos para las etiquetas de los campos */
+label {
+    display: block; /* Hace que las etiquetas ocupen su propia línea */
+    text-align: left;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Estilos para los campos de entrada de texto */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px); /* Ocupa casi todo el ancho con padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho/alto total */
+    font-size: 1em;
+}
+
+/* Estilos para el botón de registrarse */
+button#registrarse {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+button#registrarse:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+
+/* Responsive design para pantallas más pequeñas */
+@media (max-width: 600px) {
+    a {
+        top: 10px;
+        left: 10px;
+        font-size: 1em;
+    }
+
+    .contenedor {
+        padding: 20px;
+        margin: 10px;
+        margin-top: 40px; /* Ajusta el margen superior para pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    button#registrarse {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}

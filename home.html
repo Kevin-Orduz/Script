@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="home.css"> </head>
+<body>
+    <h1>¡Bienvenido a tu página de inicio!</h1>
+    <p>Este es el contenido al que solo pueden acceder los usuarios logueados.</p>
+    <button id="cerrarSesion">Cerrar Sesión</button>
+
+    <script>
+        // Opcional: Script para cerrar sesión
+        document.getElementById("cerrarSesion").addEventListener("click", function() {
+            localStorage.setItem("login", "0"); // Establece login a 0 o lo elimina
+            window.location.href = "login.html"; // Redirige al login
+        });
+    </script>
+    <script src="home.js"></script>
+</body>
+</html>
